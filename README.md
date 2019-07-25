@@ -1,2 +1,2 @@
-# computer_vision
-Project folders for Computer Vision Courses
+# Computer Vision Projects
+Project folders made in both Computer Vision Courses.

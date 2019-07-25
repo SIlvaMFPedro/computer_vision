@@ -1,0 +1,176 @@
+<html>
+
+<head>
+
+<style>
+    @font-face {
+        font-family: ARCADE;
+        src: url(joystixmonospace.ttf);
+    }
+
+    #contentBox {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    #contentBox .column {
+        float: left;
+        margin: 0;
+        width: 50%;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+
+        background: /* top, transparent black, faked with gradient */ linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+        ),
+            /* bottom, image */ url(https://raw.githubusercontent.com/nmssilva/cv-webgl-spaceinvaders/master/webvadersgl.png);
+        background-repeat:no-repeat;
+
+        background-size:cover;
+    }
+
+</style>
+
+<title>Webvaders GL</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script id="shader-vs" type="x-shader/x-vertex">
+
+    attribute vec3 aVertexPosition;
+
+    attribute vec3 aVertexColor;
+
+    uniform mat4 uMVMatrix;
+
+    uniform mat4 uPMatrix;
+
+    varying vec4 vertexColor;
+
+    void main(void) {
+
+		// To allow seeing the points drawn
+
+		gl_PointSize = 5.0;
+
+		// Just converting the (x,y,z) vertices to Homogeneous Coord.
+
+		// And multiplying by the Projection and the Model-View matrix
+
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+
+        // Converting the RGB color value to RGBA
+
+        vertexColor = vec4(aVertexColor, 1.0);
+    }
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87929398-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+
+	precision mediump float;
+
+	varying vec4 vertexColor;
+
+	void main(void) {
+
+		// Using the passed vertex color
+
+		gl_FragColor = vertexColor;
+	}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./webgl-utils.js"></script>
+
+<script type="text/javascript" src="./maths.js"></script>
+
+<script type="text/javascript" src="./models.js"></script>
+
+<script type="text/javascript" src="./lightSources.js"></script>
+
+<script type="text/javascript" src="./initShaders.js"></script>
+
+<script type="text/javascript" src="./index.js"></script>
+
+</head>
+
+<body bgcolor="#000000" onload="runWebGL();">
+
+
+
+	<div style="text-align: center">
+
+		<a style="color: #ffffff; font-family: ARCADE; font-size: 33px">Webvaders GL</a> <br>
+
+        <table style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    &#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9617;&#9600;&#9604;&#9617;&#9617;&#9617;&#9604;&#9600;&#9617;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9604;&#9608;&#9600;&#9608;&#9608;&#9608;&#9600;&#9608;&#9604;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9608;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9608;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9608;&#9617;&#9608;&#9600;&#9600;&#9600;&#9600;&#9600;&#9608;&#9617;&#9608;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9600;&#9600;&#9617;&#9600;&#9600;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;<br /></td>
+                <td><canvas id="my-canvas" style="border:1px solid #222222; background-color: #000;" width="600" height="600"></canvas></td>
+                <td>&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9604;&#9617;&#9600;&#9604;&#9617;&#9617;&#9617;&#9604;&#9600;&#9617;&#9604;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9608;&#9604;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9604;&#9608;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9604;&#9608;&#9608;&#9608;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9600;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9600;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9604;&#9600;&#9617;&#9617;&#9617;&#9617;&#9617;&#9600;&#9604;&#9617;&#9617;&#9617;&#9617;<br />
+                    &#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;<br />
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <img id="muteimg" src="nomute.png" width="30" onclick="mute();">
+                </td>
+
+
+            </tr>
+        </table>
+
+
+        <br>
+
+        <a id="myLink" style="color: #ffffff; font-family: ARCADE;">Press R to begin!</a>
+        <div id="contentBox">
+            <div class="column">
+                <p  style="text-align: left; color: #ffffff; font-family: ARCADE;">
+                    Controls:  <br>
+                    Move: Arrows or A/D <br>
+                    Shoot: Spacebar or W<br>
+                    Pause: P
+                </p>
+            </div>
+            <div class="column">
+                <p id="right" style=" text-align: right; color: #ffffff; font-family: ARCADE;">
+                    Level: 1 <br> Points: 0
+                </p>
+            </div>
+        </div>
+
+
+
+	</div>
+
+</body>
+
+</html>
