@@ -1,0 +1,3 @@
+/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/rebuild_cache.dir
+/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/calib.dir
+/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/edit_cache.dir
