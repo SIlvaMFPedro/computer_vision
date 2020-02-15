@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_40bbd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_40bbd.dir/build.make CMakeFiles/cmTC_40bbd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1d758/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d758.dir/build.make CMakeFiles/cmTC_1d758.dir/build
 make[1]: Entering directory '/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_40bbd.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_40bbd.dir/CheckSymbolExists.c.o   -c /home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_40bbd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40bbd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_40bbd.dir/CheckSymbolExists.c.o  -o cmTC_40bbd 
-CMakeFiles/cmTC_40bbd.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_1d758.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1d758.dir/CheckSymbolExists.c.o   -c /home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1d758
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d758.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1d758.dir/CheckSymbolExists.c.o  -o cmTC_1d758 
+CMakeFiles/cmTC_1d758.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_40bbd.dir/build.make:97: recipe for target 'cmTC_40bbd' failed
-make[1]: *** [cmTC_40bbd] Error 1
+CMakeFiles/cmTC_1d758.dir/build.make:97: recipe for target 'cmTC_1d758' failed
+make[1]: *** [cmTC_1d758] Error 1
 make[1]: Leaving directory '/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_40bbd/fast' failed
-make: *** [cmTC_40bbd/fast] Error 2
+Makefile:126: recipe for target 'cmTC_1d758/fast' failed
+make: *** [cmTC_1d758/fast] Error 2
 
 File /home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6279c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6279c.dir/build.make CMakeFiles/cmTC_6279c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9d0f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d0f5.dir/build.make CMakeFiles/cmTC_9d0f5.dir/build
 make[1]: Entering directory '/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6279c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6279c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6279c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6279c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_6279c.dir/CheckFunctionExists.c.o  -o cmTC_6279c -lpthreads 
+Building C object CMakeFiles/cmTC_9d0f5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9d0f5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9d0f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d0f5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9d0f5.dir/CheckFunctionExists.c.o  -o cmTC_9d0f5 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_6279c.dir/build.make:97: recipe for target 'cmTC_6279c' failed
-make[1]: *** [cmTC_6279c] Error 1
+CMakeFiles/cmTC_9d0f5.dir/build.make:97: recipe for target 'cmTC_9d0f5' failed
+make[1]: *** [cmTC_9d0f5] Error 1
 make[1]: Leaving directory '/home/pedro/Documents/computer_vision/cv-aruco-inpainting/pointclouds/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_6279c/fast' failed
-make: *** [cmTC_6279c/fast] Error 2
+Makefile:126: recipe for target 'cmTC_9d0f5/fast' failed
+make: *** [cmTC_9d0f5/fast] Error 2
 
 
