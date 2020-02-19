@@ -52,56 +52,56 @@ int main(int argc, char **argv)
     }
 
     PointCloud<PointXYZRGB>::Ptr cloud_2 (new PointCloud<PointXYZRGB>);
-    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test//foot_bulk.ply", *cloud_2) == -1) //* load the file
+    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test01//foot_bulk.ply", *cloud_2) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read foot_bulk.ply file from test directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_3 (new PointCloud<PointXYZRGB>);
-    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test//surface_cloud.ply", *cloud_3) == -1) //* load the file
+    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test01//surface_cloud.ply", *cloud_3) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read surface_cloud.ply file from test directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_4 (new PointCloud<PointXYZRGB>);
-    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//source//foot_bulk.ply", *cloud_4) == -1) //* load the file
+    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test02//foot_bulk.ply", *cloud_4) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read foot_bulk.ply file from source directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_5 (new PointCloud<PointXYZRGB>);
-    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//source//surface_cloud.ply", *cloud_5) == -1) //* load the file
+    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test02//surface_cloud.ply", *cloud_5) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read surface_cloud.ply file from source directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_6 (new PointCloud<PointXYZRGB>);
-    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test//foot_bulk.ply", *cloud_6) == -1) //* load the file
+    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test03//foot_bulk.ply", *cloud_6) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read foot_bulk.ply file from test directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_7 (new PointCloud<PointXYZRGB>);
-    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test//surface_cloud.ply", *cloud_7) == -1) //* load the file
+    if (io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test03//surface_cloud.ply", *cloud_7) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read surface_cloud.ply file from test directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_8 (new PointCloud<PointXYZRGB>);
-    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//source//foot_bulk.ply", *cloud_8) == -1) //* load the file
+    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test04//foot_bulk.ply", *cloud_8) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read foot_bulk.ply file from source directory!\n");
       return (-1);
     }
     
     PointCloud<PointXYZRGB>::Ptr cloud_9 (new PointCloud<PointXYZRGB>);
-    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//source//surface_cloud.ply", *cloud_9) == -1) //* load the file
+    if(io::loadPLYFile<PointXYZRGB> ("..//ColouredClouds//test04//surface_cloud.ply", *cloud_9) == -1) //* load the file
     {
       PCL_ERROR ("Couldn't read surface_cloud.ply from source directory!\n");
       return (-1);
